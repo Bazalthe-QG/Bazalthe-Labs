@@ -48,12 +48,19 @@ export function SkeletonCard({ count = 3 }: { count?: number }) {
   )
 }
 
-export function SkeletonGrid({ count = 6 }: { count?: number }) {
+export function SkeletonGrid({ cols = 3, rows = 2 }: { cols?: number; rows?: number }) {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-      {Array.from({ length: count }).map((_, i) => (
-        <Skeleton key={i} className="aspect-square" />
-      ))}
+    <div className="p-10 max-w-6xl space-y-8">
+      <Skeleton className="h-6 w-48" />
+      <div className="grid gap-4" style={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}>
+        {Array.from({ length: cols * rows }).map((_, i) => (
+          <div key={i} className="space-y-3">
+            <Skeleton className="h-28 w-full rounded-xl" />
+            <Skeleton className="h-3 w-2/3" />
+            <Skeleton className="h-3 w-1/2" />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

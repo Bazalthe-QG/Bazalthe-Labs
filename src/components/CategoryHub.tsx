@@ -46,12 +46,7 @@ interface Props {
   onViewModeChange: (m: ViewMode) => void
 }
 
-export default function CategoryHub({
-  category,
-  onNavigate,
-  viewMode,
-  onViewModeChange,
-}: Props) {
+export default function CategoryHub({ category, onNavigate, viewMode, onViewModeChange }: Props) {
   if (viewMode === 'group') {
     return (
       <ViewModeContext.Provider value="categorize">

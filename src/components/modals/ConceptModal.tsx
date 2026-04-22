@@ -55,7 +55,10 @@ export default function ConceptModal({ onClose }: Props) {
           maxHeight: '80vh',
         }}
       >
-        <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: 'var(--c-border)' }}>
+        <div
+          className="flex items-center justify-between px-5 py-4 border-b"
+          style={{ borderColor: 'var(--c-border)' }}
+        >
           <h2 className="text-sm font-semibold" style={{ color: 'var(--c-text)' }}>
             Concepts
           </h2>
@@ -64,7 +67,14 @@ export default function ConceptModal({ onClose }: Props) {
             className="w-7 h-7 rounded-lg flex items-center justify-center transition-all hover:opacity-70 hover:scale-110"
             style={{ color: 'var(--c-muted)' }}
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+            >
               <line x1="18" y1="6" x2="6" y2="18" />
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
@@ -87,7 +97,14 @@ export default function ConceptModal({ onClose }: Props) {
           >
             All concepts
             {currentConcept === '' && (
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+              >
                 <polyline points="20 6 9 17 4 12" />
               </svg>
             )}
@@ -128,7 +145,14 @@ export default function ConceptModal({ onClose }: Props) {
                       className="opacity-0 group-hover:opacity-70 hover:opacity-100 transition-all w-6 h-6 rounded-md flex items-center justify-center hover:bg-red-500/10 shrink-0"
                       style={{ color: '#EF4444' }}
                     >
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
                         <polyline points="3 6 5 6 21 6" />
                         <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
                         <path d="M10 11v6M14 11v6" />
@@ -167,7 +191,11 @@ export default function ConceptModal({ onClose }: Props) {
                 Add
               </button>
             </form>
-            {error && <p className="text-xs mt-2" style={{ color: '#EF4444' }}>{error}</p>}
+            {error && (
+              <p className="text-xs mt-2" style={{ color: '#EF4444' }}>
+                {error}
+              </p>
+            )}
           </div>
         )}
       </div>

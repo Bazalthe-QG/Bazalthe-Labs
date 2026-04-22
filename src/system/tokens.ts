@@ -20,3 +20,6 @@ export const MUTED = 'var(--c-muted)'
 
 // Accent
 export const ACCENT = 'var(--c-accent)'
+
+// Primary (pink)
+export const PRIMARY = 'var(--c-primary)'

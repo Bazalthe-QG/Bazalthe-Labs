@@ -51,7 +51,7 @@ export default function ControlBar({ dark, onToggleDark }: Props) {
         <button
           onClick={() => setProjectOpen(true)}
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition hover:opacity-80"
-          style={{ background: 'rgba(109,40,217,0.1)', color: 'var(--c-accent)' }}
+          style={{ background: 'rgba(236,72,153,0.1)', color: 'var(--c-primary)' }}
           title="Projects"
         >
           <svg
@@ -105,7 +105,7 @@ export default function ControlBar({ dark, onToggleDark }: Props) {
           <button
             onClick={() => setUserMenuOpen((o) => !o)}
             className="w-8 h-8 rounded-full flex items-center justify-center transition hover:opacity-80"
-            style={{ background: 'var(--c-accent)', color: 'white' }}
+            style={{ background: 'var(--c-primary)', color: 'white' }}
             title={user?.name ?? 'Account'}
           >
             <svg

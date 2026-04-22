@@ -17,7 +17,13 @@ export function ShowMore({ items, maxVisible = PAGINATION.sidebarMaxItems, label
   const remaining = items.length - maxVisible
 
   if (items.length <= maxVisible) {
-    return <>{items.map((item, i) => <div key={i}>{item}</div>)}</>
+    return (
+      <>
+        {items.map((item, i) => (
+          <div key={i}>{item}</div>
+        ))}
+      </>
+    )
   }
 
   const visible = expanded ? items : items.slice(0, maxVisible)

@@ -89,7 +89,7 @@ export default function ExampleBox({
   return (
     <div className="flex flex-col gap-1">
       <div
-        className={`relative rounded-xl border flex items-center justify-center w-full transition hover:border-violet-300/60 cursor-default select-none ${sizeStyle[size ?? 'md']} ${className}`}
+        className={`relative rounded-xl border flex items-center justify-center w-full transition hover:border-pink-300/60 cursor-default select-none ${sizeStyle[size ?? 'md']} ${className}`}
         style={{ background: 'var(--c-surface)', borderColor: 'var(--c-border)' }}
         onContextMenu={onContextMenu}
       >
@@ -209,8 +209,8 @@ export default function ExampleBox({
                           key={p.id}
                           className="w-full text-left px-3 py-1.5 rounded-lg text-xs flex items-center justify-between transition hover:opacity-80"
                           style={{
-                            color: inThis ? 'var(--c-accent)' : 'var(--c-text)',
-                            background: inThis ? 'rgba(109,40,217,0.06)' : 'transparent',
+                            color: inThis ? 'var(--c-primary)' : 'var(--c-text)',
+                            background: inThis ? 'rgba(236,72,153,0.06)' : 'transparent',
                             fontWeight: inThis ? 600 : 400,
                           }}
                           onClick={() => {

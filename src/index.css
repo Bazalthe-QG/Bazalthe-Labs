@@ -1,36 +1,40 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @variant dark (&:where(.dark, .dark *));
 
 :root {
-  --c-bg:      #F4F2EC;
-  --c-surface: #FFFFFF;
-  --c-sidebar: #F9F8F4;
-  --c-border:  #E2DDD5;
-  --c-text:    #1A1714;
-  --c-muted:   #8C8880;
-  --c-accent:  #6D28D9;
-  --c-primary: #EC4899;
+  --c-bg: #f4f2ec;
+  --c-surface: #ffffff;
+  --c-sidebar: #f9f8f4;
+  --c-border: #e2ddd5;
+  --c-text: #1a1714;
+  --c-muted: #8c8880;
+  --c-accent: #6d28d9;
+  --c-primary: #ec4899;
 }
 
 .dark {
-  --c-bg:      #17161C;
-  --c-surface: #231F2B;
-  --c-sidebar: #1D1A25;
-  --c-border:  #342F3F;
-  --c-text:    #EDE9E0;
-  --c-muted:   #6D6879;
-  --c-accent:  #A78BFA;
-  --c-primary: #EC4899;
+  --c-bg: #17161c;
+  --c-surface: #231f2b;
+  --c-sidebar: #1d1a25;
+  --c-border: #342f3f;
+  --c-text: #ede9e0;
+  --c-muted: #6d6879;
+  --c-accent: #a78bfa;
+  --c-primary: #ec4899;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { 
+  from {
     opacity: 0;
     transform: translateY(8px);
   }
@@ -41,12 +45,27 @@
 }
 
 @keyframes pulse-pink {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7); }
-  50% { box-shadow: 0 0 0 6px rgba(236, 72, 153, 0); }
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(236, 72, 153, 0);
+  }
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-.animate-fadeIn { animation: fadeIn 200ms ease-out; }
-.animate-slideUp { animation: slideUp 300ms cubic-bezier(0.4, 0, 0.2, 1); }
-.animate-pulse-pink { animation: pulse-pink 2s infinite; }
+.animate-fadeIn {
+  animation: fadeIn 200ms ease-out;
+}
+.animate-slideUp {
+  animation: slideUp 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animate-pulse-pink {
+  animation: pulse-pink 2s infinite;
+}

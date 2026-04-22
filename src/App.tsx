@@ -1,14 +1,15 @@
 import { Suspense, useState } from 'react'
 import Sidebar from './components/layout/Sidebar'
-import PageHeader from './components/layout/PageHeader'
 import CategoryHub from './components/CategoryHub'
 import LoginPage from './components/LoginPage'
+import { SkeletonGrid } from './components/Skeleton'
 import { categories, type Category } from './experiments'
 import { FavoritesProvider, useFavorites } from './context/FavoritesContext'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import { DbProvider } from './context/DbContext'
 import { PageKeyContext } from './context/PageKeyContext'
 import { ViewModeContext, type ViewMode } from './system'
+import loadingConfig from './config/loading.json'
 
 // Inner app that can access FavoritesContext + AuthContext
 function AppInner() {
@@ -17,7 +18,7 @@ function AppInner() {
   const [activeSubPageId, setActiveSubPageId] = useState<string | null>(null)
   const [dark, setDark] = useState(false)
   const [viewMode, setViewMode] = useState<ViewMode>('categorize')
-  const { currentProject } = useFavorites()
+  useFavorites()
 
   const activeCategoryData = categories.find((c) => c.id === activeCategory)!
   const activeSubPage = activeSubPageId
@@ -50,55 +51,35 @@ function AppInner() {
         activeSubPageId={activeSubPageId}
         onSelectCategory={handleSelectCategory}
         onSelectSubPage={handleSelectSubPage}
+        dark={dark}
+        onToggleDark={() => setDark((d) => !d)}
+        onBack={activeSubPage ? () => setActiveSubPageId(null) : undefined}
+        categoryLabel={activeCategoryData.label}
+        subPageLabel={activeSubPage?.label}
       />
-      <div className="flex flex-col flex-1 overflow-hidden">
-        <PageHeader
-          category={activeCategoryData}
-          subPage={activeSubPage ?? undefined}
-          onBack={activeSubPage ? () => setActiveSubPageId(null) : undefined}
-          dark={dark}
-          onToggleDark={() => setDark((d) => !d)}
-        />
-        <main className="flex-1 overflow-auto relative" style={{ background: 'var(--c-bg)' }}>
-          {currentProject !== '' && !Preview ? (
-            // Simple project-filter empty state check handled in ExampleBox — just show content
-            <Suspense fallback={<LoadingSpinner />}>
-              <PageKeyContext.Provider value={pageKey}>
-                <ViewModeContext.Provider value={viewMode}>
-                  <CategoryHub
-                    category={activeCategoryData}
-                    onNavigate={setActiveSubPageId}
-                    viewMode={viewMode}
-                    onViewModeChange={setViewMode}
-                  />
-                </ViewModeContext.Provider>
-              </PageKeyContext.Provider>
-            </Suspense>
-          ) : (
-            <Suspense fallback={<LoadingSpinner />}>
-              <PageKeyContext.Provider value={pageKey}>
-                <ViewModeContext.Provider value={viewMode}>
-                  {Preview ? (
-                    <Preview />
-                  ) : (
-                    <CategoryHub
-                      category={activeCategoryData}
-                      onNavigate={setActiveSubPageId}
-                      viewMode={viewMode}
-                      onViewModeChange={setViewMode}
-                    />
-                  )}
-                </ViewModeContext.Provider>
-              </PageKeyContext.Provider>
-            </Suspense>
-          )}
-        </main>
-      </div>
+      <main className="flex-1 overflow-auto relative" style={{ background: 'var(--c-bg)' }}>
+        <Suspense fallback={loadingConfig.type === 'skeleton' ? <SkeletonGrid /> : <LoadingText />}>
+          <PageKeyContext.Provider value={pageKey}>
+            <ViewModeContext.Provider value={viewMode}>
+              {Preview ? (
+                <Preview />
+              ) : (
+                <CategoryHub
+                  category={activeCategoryData}
+                  onNavigate={setActiveSubPageId}
+                  viewMode={viewMode}
+                  onViewModeChange={setViewMode}
+                />
+              )}
+            </ViewModeContext.Provider>
+          </PageKeyContext.Provider>
+        </Suspense>
+      </main>
     </div>
   )
 }
 
-function LoadingSpinner() {
+function LoadingText() {
   return (
     <div
       className="flex items-center justify-center h-full text-sm"

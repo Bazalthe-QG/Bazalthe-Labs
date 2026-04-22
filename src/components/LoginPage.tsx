@@ -164,7 +164,7 @@ export default function LoginPage() {
                 type="submit"
                 disabled={loading || !email}
                 className="w-full py-3.5 rounded-xl text-base font-semibold transition disabled:opacity-40"
-                style={{ background: 'var(--c-accent)', color: 'white' }}
+                style={{ background: 'var(--c-primary)', color: 'white' }}
               >
                 {loading ? 'Sending…' : 'Continue'}
               </button>
@@ -204,7 +204,7 @@ export default function LoginPage() {
                     className="w-12 h-14 text-center text-xl font-bold rounded-xl border outline-none transition focus:ring-2 focus:ring-violet-500/40 select-none"
                     style={{
                       background: 'var(--c-surface)',
-                      borderColor: digit ? 'var(--c-accent)' : 'var(--c-border)',
+                      borderColor: digit ? 'var(--c-primary)' : 'var(--c-border)',
                       color: 'var(--c-text)',
                     }}
                   />
@@ -217,7 +217,7 @@ export default function LoginPage() {
                 onClick={() => void handleVerify()}
                 disabled={loading || code.join('').length < 6}
                 className="w-full py-3.5 rounded-xl text-base font-semibold transition disabled:opacity-40"
-                style={{ background: 'var(--c-accent)', color: 'white' }}
+                style={{ background: 'var(--c-primary)', color: 'white' }}
               >
                 {loading ? 'Verifying…' : 'Verify code'}
               </button>
@@ -243,7 +243,7 @@ export default function LoginPage() {
                   onClick={() => void handleResend()}
                   disabled={resendCooldown > 0 || loading}
                   className="transition hover:opacity-80 disabled:opacity-40"
-                  style={{ color: resendCooldown > 0 ? 'var(--c-muted)' : 'var(--c-accent)' }}
+                  style={{ color: resendCooldown > 0 ? 'var(--c-muted)' : 'var(--c-primary)' }}
                 >
                   {resendCooldown > 0 ? `Resend in ${resendCooldown}s` : 'Resend code'}
                 </button>
