@@ -112,7 +112,7 @@ export default function LoginPage() {
             {/* Title */}
             <div className="text-center flex flex-col items-center gap-4">
               <img
-                src="/logo.jpg"
+                src="/bazalthe-trsp.png"
                 alt="Bazalthe Labs"
                 className="w-14 h-14 rounded-2xl object-cover"
               />

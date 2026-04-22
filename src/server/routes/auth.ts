@@ -112,7 +112,18 @@ router.post('/send-otp', async (req, res) => {
     const expiresAt = new Date(Date.now() + 15 * 60_000)
 
     await prisma.loginToken.create({ data: { email: normalised, code, expiresAt } })
-    await sendOtpEmail(normalised, code)
+
+    try {
+      await sendOtpEmail(normalised, code)
+    } catch (mailErr) {
+      // In dev/test mode Resend only allows sending to the owner's email.
+      // Log the OTP in the terminal so you can still test locally.
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn(`[send-otp] Email delivery failed (dev mode). OTP for ${normalised}: ${code}`)
+      } else {
+        throw mailErr
+      }
+    }
 
     // Always return success (don't reveal whether the email is registered)
     res.json({ sent: true })
