@@ -2,7 +2,7 @@
 .github/
 *.md
 !README.md
-!.gitignore
+!task.md
 ## Environment & Secrets
 .env
 .env.local
@@ -18,10 +18,10 @@ package-lock.json
 pnpm-lock.yaml
 
 ## Database
-prisma/dev.db
-prisma/dev.db-wal
-prisma/dev.db-shm
-prisma/.env.local
+src/prisma/dev.db
+src/prisma/dev.db-wal
+src/prisma/dev.db-shm
+src/prisma/.env.local
 
 ## Build & Dist
 dist/
@@ -29,7 +29,7 @@ dist-ssr/
 build/
 *.local
 
-## Prisma
+## Generated Prisma
 .prisma/
 generated/
 

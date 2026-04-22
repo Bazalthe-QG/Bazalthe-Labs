@@ -7,8 +7,7 @@
     "outDir": "dist/server",
     "noEmit": false,
     "verbatimModuleSyntax": false,
-    "allowImportingTsExtensions": false,
-    "jsx": undefined
+    "allowImportingTsExtensions": false
   },
-  "include": ["server"]
+  "include": ["src/server"]
 }

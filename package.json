@@ -5,18 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:server": "tsx watch server/index.ts",
-    "dev:all": "concurrently -n \"vite,api\" -c \"cyan,green\" \"vite\" \"tsx watch server/index.ts\"",
+    "dev:server": "tsx watch src/server/index.ts",
+    "dev:all": "concurrently -n \"vite,api\" -c \"cyan,green\" \"vite\" \"tsx watch src/server/index.ts\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
     "preview": "vite preview",
-    "db:push": "prisma db push",
+    "db:push": "prisma db push --schema=src/prisma/schema.prisma",
     "db:seed": "prisma db seed",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio --schema=src/prisma/schema.prisma"
   },
   "prisma": {
-    "seed": "tsx prisma/seed.ts"
+    "seed": "tsx src/prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "5",
