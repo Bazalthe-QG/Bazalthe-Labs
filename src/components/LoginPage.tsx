@@ -110,18 +110,25 @@ export default function LoginPage() {
         {step === 'email' ? (
           <>
             {/* Title */}
-            <div className="text-center flex flex-col gap-3">
-              <h1
-                className="text-4xl font-bold leading-tight tracking-tight"
-                style={{ color: 'var(--c-text)' }}
-              >
-                Sign into
-                <br />
-                Bazalthe Labs
-              </h1>
-              <p className="text-base" style={{ color: 'var(--c-muted)' }}>
-                Enter your email to receive a sign-in code.
-              </p>
+            <div className="text-center flex flex-col items-center gap-4">
+              <img
+                src="/logo.jpg"
+                alt="Bazalthe Labs"
+                className="w-14 h-14 rounded-2xl object-cover"
+              />
+              <div className="flex flex-col gap-2">
+                <h1
+                  className="text-4xl font-bold leading-tight tracking-tight"
+                  style={{ color: 'var(--c-text)' }}
+                >
+                  Sign into
+                  <br />
+                  Bazalthe Labs
+                </h1>
+                <p className="text-base" style={{ color: 'var(--c-muted)' }}>
+                  Enter your email to receive a sign-in code.
+                </p>
+              </div>
             </div>
 
             {/* Email form */}
