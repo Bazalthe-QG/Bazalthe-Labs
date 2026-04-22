@@ -15,7 +15,6 @@ export default function PageHeader({ category, subPage, onBack, dark, onToggleDa
       className="h-11 px-6 flex items-center justify-between border-b shrink-0"
       style={{ background: 'var(--c-sidebar)', borderColor: 'var(--c-border)' }}
     >
-      {/* ── Breadcrumb ── */}
       <div className="flex items-center gap-2 min-w-0">
         {subPage && onBack && (
           <button
@@ -69,7 +68,6 @@ export default function PageHeader({ category, subPage, onBack, dark, onToggleDa
         )}
       </div>
 
-      {/* ── Right side controls ── */}
       <ControlBar dark={dark} onToggleDark={onToggleDark} />
     </header>
   )

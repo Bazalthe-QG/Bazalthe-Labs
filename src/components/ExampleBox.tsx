@@ -115,7 +115,6 @@ export default function ExampleBox({
         )}
       </div>
 
-      {/* ── Context menu ── */}
       {menu && (
         <div
           ref={menuRef}
