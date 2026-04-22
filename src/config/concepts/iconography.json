@@ -1,0 +1,11 @@
+{
+  "id": "iconography",
+  "label": "Iconography",
+  "description": "SVG icon sets and emoji glyphs for communicating meaning without text",
+  "entries": [
+    { "category": "emojis", "subPageId": "filled" },
+    { "category": "emojis", "subPageId": "outlined" },
+    { "category": "emojis", "subPageId": "faces" },
+    { "category": "emojis", "subPageId": "objects" }
+  ]
+}

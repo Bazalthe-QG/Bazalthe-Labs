@@ -1,0 +1,13 @@
+{
+  "id": "motion",
+  "label": "Motion",
+  "description": "Animation and transition patterns for bringing UI to life",
+  "entries": [
+    { "category": "animations", "subPageId": "entrance" },
+    { "category": "animations", "subPageId": "slide" },
+    { "category": "animations", "subPageId": "stagger" },
+    { "category": "animations", "subPageId": "loops" },
+    { "category": "animations", "subPageId": "click" },
+    { "category": "animations", "subPageId": "hover" }
+  ]
+}

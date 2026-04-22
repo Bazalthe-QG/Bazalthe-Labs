@@ -1,0 +1,23 @@
+{
+  "id": "form-input",
+  "label": "Form Input",
+  "description": "Controls and patterns for collecting and submitting user data",
+  "entries": [
+    { "category": "forms", "subPageId": "text-inputs" },
+    { "category": "forms", "subPageId": "otp-pin" },
+    { "category": "forms", "subPageId": "tag-multi" },
+    { "category": "forms", "subPageId": "textareas-selects" },
+    { "category": "forms", "subPageId": "file-upload" },
+    { "category": "forms", "subPageId": "toggles-checks" },
+    { "category": "forms", "subPageId": "radio" },
+    { "category": "forms", "subPageId": "sliders" },
+    { "category": "forms", "subPageId": "ratings" },
+    { "category": "forms", "subPageId": "step-wizard" },
+    { "category": "forms", "subPageId": "search-bars" },
+    { "category": "forms", "subPageId": "chip-filters" },
+    { "category": "forms", "subPageId": "dropdown-filters" },
+    { "category": "forms", "subPageId": "filter-panels" },
+    { "category": "forms", "subPageId": "auth-forms" },
+    { "category": "forms", "subPageId": "composed-forms" }
+  ]
+}

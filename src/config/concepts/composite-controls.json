@@ -1,0 +1,11 @@
+{
+  "id": "composite-controls",
+  "label": "Composite Controls",
+  "description": "Multi-part interactive controls that switch or group options",
+  "entries": [
+    { "category": "buttons", "subPageId": "groups" },
+    { "category": "buttons", "subPageId": "segments" },
+    { "category": "buttons", "subPageId": "tabs" },
+    { "category": "buttons", "subPageId": "toggles" }
+  ]
+}

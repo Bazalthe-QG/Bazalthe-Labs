@@ -1,0 +1,14 @@
+{
+  "id": "semantic-states",
+  "label": "Semantic States",
+  "description": "Components that communicate outcome, risk or progress status",
+  "entries": [
+    { "category": "buttons", "subPageId": "danger" },
+    { "category": "buttons", "subPageId": "success" },
+    { "category": "buttons", "subPageId": "warning" },
+    { "category": "buttons", "subPageId": "states" },
+    { "category": "cards", "subPageId": "empty-states" },
+    { "category": "badges", "subPageId": "labels" },
+    { "category": "badges", "subPageId": "status-dots" }
+  ]
+}

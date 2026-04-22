@@ -1,0 +1,15 @@
+{
+  "id": "color-token",
+  "label": "Color & Token",
+  "description": "Color systems, gradients, shadows and CSS design token primitives",
+  "entries": [
+    { "category": "colors", "subPageId": "palettes" },
+    { "category": "colors", "subPageId": "gradients" },
+    { "category": "colors", "subPageId": "tokens" },
+    { "category": "shadows", "subPageId": "elevation-scale" },
+    { "category": "shadows", "subPageId": "in-use" },
+    { "category": "shadows", "subPageId": "glow" },
+    { "category": "shadows", "subPageId": "creative" },
+    { "category": "shadows", "subPageId": "on-elements" }
+  ]
+}

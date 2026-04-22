@@ -1,0 +1,13 @@
+{
+  "id": "data-display",
+  "label": "Data Display",
+  "description": "Cards and containers that present structured content or data",
+  "entries": [
+    { "category": "cards", "subPageId": "identity-cards" },
+    { "category": "cards", "subPageId": "content" },
+    { "category": "cards", "subPageId": "data-stats" },
+    { "category": "cards", "subPageId": "special" },
+    { "category": "cards", "subPageId": "interactive" },
+    { "category": "cards", "subPageId": "product" }
+  ]
+}

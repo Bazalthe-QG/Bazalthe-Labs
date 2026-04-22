@@ -1,0 +1,14 @@
+{
+  "id": "navigation",
+  "label": "Navigation",
+  "description": "Layout shells and patterns for moving between pages or sections",
+  "entries": [
+    { "category": "layouts", "subPageId": "pages" },
+    { "category": "layouts", "subPageId": "components" },
+    { "category": "layouts", "subPageId": "sidebar-left" },
+    { "category": "layouts", "subPageId": "sidebar-right" },
+    { "category": "layouts", "subPageId": "sidebar-header" },
+    { "category": "layouts", "subPageId": "sidebar-footer" },
+    { "category": "layouts", "subPageId": "sidebar-divers" }
+  ]
+}

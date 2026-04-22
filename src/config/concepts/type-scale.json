@@ -1,0 +1,11 @@
+{
+  "id": "type-scale",
+  "label": "Type Scale",
+  "description": "Type scale, font weights, text effects and typographic patterns",
+  "entries": [
+    { "category": "typography", "subPageId": "scale" },
+    { "category": "typography", "subPageId": "weights" },
+    { "category": "typography", "subPageId": "style-combos" },
+    { "category": "typography", "subPageId": "special" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "feedback",
+  "label": "Feedback",
+  "description": "Indicators that communicate progress, loading or async state to the user",
+  "entries": [
+    { "category": "loaders", "subPageId": "spinners" },
+    { "category": "loaders", "subPageId": "dots" },
+    { "category": "loaders", "subPageId": "bars" },
+    { "category": "loaders", "subPageId": "overlay" },
+    { "category": "loaders", "subPageId": "skeleton" },
+    { "category": "loaders", "subPageId": "text-loaders" },
+    { "category": "badges", "subPageId": "notifications" },
+    { "category": "badges", "subPageId": "animated" },
+    { "category": "badges", "subPageId": "progress-steps" }
+  ]
+}

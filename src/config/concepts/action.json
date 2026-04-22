@@ -1,0 +1,16 @@
+{
+  "id": "action",
+  "label": "Action",
+  "description": "Core interactive triggers used to perform user actions",
+  "entries": [
+    { "category": "buttons", "subPageId": "variants" },
+    { "category": "buttons", "subPageId": "sizes" },
+    { "category": "buttons", "subPageId": "shapes" },
+    { "category": "buttons", "subPageId": "colors" },
+    { "category": "buttons", "subPageId": "soft" },
+    { "category": "buttons", "subPageId": "social" },
+    { "category": "buttons", "subPageId": "full-width" },
+    { "category": "buttons", "subPageId": "icons" },
+    { "category": "buttons", "subPageId": "with-badges" }
+  ]
+}

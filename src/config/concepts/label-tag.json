@@ -1,0 +1,15 @@
+{
+  "id": "label-tag",
+  "label": "Label & Tag",
+  "description": "Small inline components for categorizing, tagging or annotating content",
+  "entries": [
+    { "category": "badges", "subPageId": "pills" },
+    { "category": "badges", "subPageId": "solid-spectrum" },
+    { "category": "badges", "subPageId": "soft-spectrum" },
+    { "category": "badges", "subPageId": "outline-spectrum" },
+    { "category": "badges", "subPageId": "square-mono" },
+    { "category": "badges", "subPageId": "keyboard" },
+    { "category": "badges", "subPageId": "decorative" },
+    { "category": "badges", "subPageId": "tag-chips" }
+  ]
+}
